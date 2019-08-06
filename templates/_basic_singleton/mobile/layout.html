@@ -1,0 +1,32 @@
+<!-- webpack.htmlwebpackplugin mobile layout 入口html文件 -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+        <meta http-equiv="cache-control" content="no-cache">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="wap-font-scale" content="no">
+        <title><%= htmlWebpackPlugin.options.app.pageTitle %></title>
+        <% if (htmlWebpackPlugin.options.injectScripts) {
+            htmlWebpackPlugin.options.injectScripts.forEach((val) => { %>
+        <script>
+            <%= require('fs').readFileSync(val) %>
+        </script>
+        <%  })
+        } %>
+    </head>
+    <body>
+        <!-- html ejs / vue template -->
+        <div id="app" v-cloak></div>
+
+        <% if (htmlWebpackPlugin.options.externals) {
+            htmlWebpackPlugin.options.externals.forEach((val) => {  %>
+        <script src="<%= val %>"></script>
+        <%  })
+        } %>
+    </body>
+</html>

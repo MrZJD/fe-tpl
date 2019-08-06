@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vendor mobile test</title>
+</head>
+<body>
+    <script src="../../lib/dist/dll.mobile.js"></script>
+    <script src="../../lib/dist/vendor.mobile.js"></script>
+    <script>
+        // -> vendor 依赖 dll vue
+        console.group('test')
+        console.assert(window.common !== undefined, 'common does not exported')
+        console.assert(vendor !== undefined, 'vendor does not exported')
+        console.assert(vendor.common !== undefined, 'vendor.common does not exported')
+        console.assert(vendor.wxShare !== undefined, 'vendor.wxShare does not exported')
+        console.log('%c vendor mobile 测试通过', 'color: green')
+        console.groupEnd('test')
+    </script>
+</body>
+</html>

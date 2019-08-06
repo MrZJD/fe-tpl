@@ -1,0 +1,51 @@
+@activityName: '';
+@bf: 1px*10/7;
+@imgUrl: './images';
+
+[v-cloak]{ display:none!important; }
+
+img {
+    font-size: 0px;
+}
+
+.fl-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fl-ver {
+    display: flex;
+    align-items: center;
+}
+.txt-of {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+.btn:active {
+    opacity: 0.85;
+}
+
+.getSpritePad (@w, @h, @posx, @posy, @pad) {
+    background-position: (@posx + @pad)/@bf (@posy + @pad)/@bf;
+    width: (@w + @pad*2)/@bf;
+    height: (@h + @pad*2)/@bf;
+}
+.getSprite (@w, @h, @posx, @posy) {
+    .getSpritePad(@w, @h, @posx, @posy, 5);
+}
+
+.SET_SPRITE () {
+    .sprite {
+        // background: url('@{imgUrl}/sprite.png') no-repeat;
+        // background-size: 0/@bf 0/@bf;
+        font-size: 0px;
+        display: block;
+    }
+}
+.SET_SPRITE();

@@ -1,0 +1,14 @@
+{
+    "dll.mobile.js": {
+        "latest": "v0.0.1"
+    },
+    "dll.web.js": {
+        "latest": "v0.0.1"
+    },
+    "vendor.mobile.js": {
+        "latest": "v0.0.1"
+    },
+    "vendor.web.js": {
+        "latest": "v0.0.1"
+    }
+}

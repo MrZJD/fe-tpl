@@ -1,0 +1,43 @@
+/*
+* css reset and common css styles
+* 2016-08-01
+* 参考SMAcss分类
+*/
+
+/*
+*    base rules
+*/
+@charset "utf-8";
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, code,
+del, dfn, em, img, q, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, dialog, figure, footer, header,
+hgroup, nav, section {margin: 0;padding: 0;border: 0;font-weight: inherit;font-style: inherit;font-size: 100%;font-family: inherit;}
+
+article, aside, dialog, figure, footer, header, hgroup, nav, section {display:block;}
+body {line-height: 1.5;}
+
+/* remember to define focus styles! */
+:focus {outline:0;}
+
+/* 为<q>,<blockquote>删除引号("). */
+blockquote:before, blockquote:after, q:before, q:after { content: ""; }
+blockquote, q { quotes: "" ""; }
+
+/* 清除带连接图片的边框. */
+a img { border: none; }
+button{border:none;}
+body,div,h1,h2,h3,h4,h5,h6,dl,dd,dt,img,b,textarea,input,select,form,a,table,tr,th,td,fieldset,legend {margin:0;padding:0;list-style:none;font-size:12px;font-family:"Microsoft YaHei" ,Verdana;color:#333;line-height:1.5;z-index:inherit;}
+ul li{list-style:none;}
+body {background:#fff;}    
+input,select,textarea {padding:2px 5px;border:#ccc 1px solid;}
+textarea{resize: none;}
+/* 连接样式-顺序是(连接伪类):link,:visited,(动态伪类):hover,:focus,:active */
+a {color:#333;text-decoration:none;}
+a:hover {color:#ff0071;text-decoration:underline;}
+b,i {font-style:normal;}
+b {color:#F00;}
+em {display:block;}

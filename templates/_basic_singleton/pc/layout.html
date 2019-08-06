@@ -1,0 +1,48 @@
+<!-- webpack.htmlwebpackplugin pc layout 入口html文件 -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+        <meta http-equiv="cache-control" content="no-cache">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="wap-font-scale" content="no">
+        <meta name="renderer" content="webkit">
+
+        <title><%= htmlWebpackPlugin.options.app.pageTitle %></title>
+
+        <% if (htmlWebpackPlugin.options.injectScripts) {
+            htmlWebpackPlugin.options.injectScripts.forEach((val) => { %>
+        <script>
+            <%= require('fs').readFileSync(val) %>
+        </script>
+        <%  })
+        } %>
+    </head>
+
+    <body>
+        <!--[if lt IE 9]>
+        <p class="browsehappy">您正使用过时的浏览器访问，可能有安全风险。建议您<a href="//browsehappy.osfipin.com/#" target="_balnk">升级浏览器</a></p>
+        <div class="update_browser_wrap">
+            <span class="mask" style="background: #000!important;z-index:99999;"></span>
+            <div class="content"style="z-index:999999;">
+                <p>hi，您当前的浏览器版本过低，可能存在重大安全漏洞！</p>
+                <h3>请立即<a href="//browsehappy.osfipin.com" target="_blank">升级浏览器</a></h3>
+                <a href="//se.360.cn/" target="_blank" class="skip_btn">360浏览器</a>
+            </div>
+        </div>
+        <![endif]-->
+        
+        <!-- html ejs / vue template -->
+        <div id="app" v-cloak></div>
+
+        <% if (htmlWebpackPlugin.options.externals) {
+            htmlWebpackPlugin.options.externals.forEach((val) => {  %>
+        <script src="<%= val %>"></script>
+        <%  })
+        } %>
+    </body>
+</html>
