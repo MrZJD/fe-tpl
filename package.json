@@ -43,7 +43,7 @@
     "@types/jest": "^24.0.15",
     "axios": "^0.18.0",
     "fs-extra": "^8.1.0",
-    "jquery": "^3.4.0",
+    "jquery": "^3.5.0",
     "layui-src": "^2.4.5",
     "ora": "^3.4.0",
     "simple-git": "^1.122.0",
