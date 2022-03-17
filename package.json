@@ -46,7 +46,7 @@
     "jquery": "^3.4.0",
     "layui-src": "^2.4.5",
     "ora": "^3.4.0",
-    "simple-git": "^1.122.0",
+    "simple-git": "^3.3.0",
     "vue": "^2.6.10",
     "webpack-zepto": "0.0.1",
     "weixin-js-sdk": "^1.2.0"
